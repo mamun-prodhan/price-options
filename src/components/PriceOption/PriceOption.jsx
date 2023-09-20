@@ -1,10 +1,14 @@
 import PropTypes from "prop-types";
 import Feature from "../Feature/Feature";
 
-const PriceOption = ({ option }) => {
+const PriceOption = ({ option, dark }) => {
   const { name, price, features } = option;
   return (
-    <div className="text-center bg-blue-400 p-6 rounded-xl flex flex-col">
+    <div
+      className={`text-center  ${
+        dark ? "text-white bg-black" : "text-black bg-blue-400"
+      } p-6 rounded-xl flex flex-col`}
+    >
       <h1>
         <span className="text-7xl font-extrabold">{price}</span>
         <span className="text-2xl">/mon</span>
@@ -15,7 +19,9 @@ const PriceOption = ({ option }) => {
           <Feature key={idx} feature={feature}></Feature>
         ))}
       </div>
-      <button className="w-full bg-green-600 py-3 rounded-lg">Buy Now</button>
+      <button className="mt-6 w-full bg-green-600 py-3 rounded-lg">
+        Buy Now
+      </button>
     </div>
   );
 };
