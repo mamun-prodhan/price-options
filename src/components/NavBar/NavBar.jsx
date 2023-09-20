@@ -20,7 +20,11 @@ const NavBar = () => {
           <AiOutlineMenu></AiOutlineMenu>
         )}
       </div>
-      <ul className="md:flex">
+      <ul
+        className={`md:flex absolute md:static ${
+          open ? "top-16" : "-top-60"
+        } duration-1000 bg-gray-400 pt-2 px-6`}
+      >
         {routes.map((route) => (
           <Link key={route.id} route={route}></Link>
         ))}
