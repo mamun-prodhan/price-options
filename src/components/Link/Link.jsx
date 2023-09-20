@@ -11,6 +11,6 @@ const Link = ({ route }) => {
 };
 
 Link.propTypes = {
-  route: PropTypes.objecet,
+  route: PropTypes.object,
 };
 export default Link;
