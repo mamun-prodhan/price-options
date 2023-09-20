@@ -2,6 +2,9 @@ import { useState } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import PriceOptions from "./components/PriceOptions/PriceOptions";
 import { BsFillSunFill, BsFillMoonStarsFill } from "react-icons/bs";
+import ReactRechart from "./components/ReactRechart/ReactRechart";
+import { Line } from "recharts";
+import Phones from "./components/Phones/Phones";
 
 function App() {
   const [dark, setDark] = useState(false);
@@ -26,6 +29,8 @@ function App() {
       </button>
       <NavBar></NavBar>
       <PriceOptions dark={dark}></PriceOptions>
+      <ReactRechart></ReactRechart>
+      <Phones></Phones>
     </>
   );
 }
